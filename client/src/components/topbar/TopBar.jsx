@@ -6,8 +6,6 @@ export default function TopBar() {
   const user = false;
   return (
     <div className = "top">
-
-
        <div className = "topLeft">
           <i className="topIcon fa-brands fa-facebook"></i>
           <i className="topIcon fa-brands fa-twitter"></i>
