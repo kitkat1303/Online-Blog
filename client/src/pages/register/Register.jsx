@@ -9,6 +9,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  //makes sure page does not refresh and is submitted
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
@@ -18,6 +19,7 @@ export default function Register() {
         email,
         password,
       });
+      //if succesfully register then send to log in page 
       res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
@@ -32,6 +34,7 @@ export default function Register() {
           type="text"
           className="registerInput"
           placeholder="Enter your username..."
+           //change input then set 
           onChange={(e) => setUsername(e.target.value)}
         />
         <label>Email</label>
@@ -39,6 +42,7 @@ export default function Register() {
           type="text"
           className="registerInput"
           placeholder="Enter your email..."
+          //change input then set 
           onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password</label>
